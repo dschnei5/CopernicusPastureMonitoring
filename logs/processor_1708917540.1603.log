@@ -1,0 +1,43 @@
+ERROR [2024-02-26 14:19:00] object 'https://openeo.dataspace.copernicus.eu' not found
+
+Compact call stack:
+  1 source("C:/R/CopernicusPastureMonitoring/CopernicusPastureMonitoring.R")
+  2 CopernicusPastureMonitoring.R#11: tryCatchLog({
+  3 CopernicusPastureMonitoring.R#13: connect(host = get(d.host))
+
+Full call stack:
+  1 source("C:/R/CopernicusPastureMonitoring/CopernicusPastureMonitoring.R")
+  2 withVisible(eval(ei, envir))
+  3 eval(ei, envir)
+  4 eval(ei, envir)
+  5 CopernicusPastureMonitoring.R#11: tryCatchLog({
+        connection <- connect(host = get(d.host))
+        login()
+        colls <- l
+  6 tryCatch(withCallingHandlers(expr, condition = cond.handler), ..., finally = finally)
+  7 tryCatchList(expr, classes, parentenv, handlers)
+  8 tryCatchOne(tryCatchList(expr, names[-nh], parentenv, handlers[-nh]), names[nh], parentenv, handlers[[nh]])
+  9 doTryCatch(return(expr), name, parentenv, handler)
+  10 tryCatchList(expr, names[-nh], parentenv, handlers[-nh])
+  11 tryCatchOne(expr, names, parentenv, handlers[[1]])
+  12 doTryCatch(return(expr), name, parentenv, handler)
+  13 withCallingHandlers(expr, condition = cond.handler)
+  14 CopernicusPastureMonitoring.R#13: connect(host = get(d.host))
+  15 con$connect(url = host, version = version, exchange_token = exchange_token)
+  16 tryCatch({
+        if (is.null(url) && length(self$getHost()) == 0) {
+            message("Note: Host-URL is missing")
+            r
+  17 tryCatchList(expr, classes, parentenv, handlers)
+  18 tryCatchOne(expr, names, parentenv, handlers[[1]])
+  19 value[[3]](cond)
+  20 message(e)
+  21 withRestarts({
+        signalCondition(cond)
+        defaultHandler(cond)
+    }, muffleMessage = function() NULL)
+  22 withOneRestart(expr, restarts[[1]])
+  23 doWithOneRestart(return(expr), restart)
+  24 signalCondition(cond)
+
+
